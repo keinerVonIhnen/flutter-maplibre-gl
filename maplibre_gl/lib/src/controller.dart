@@ -94,7 +94,7 @@ class MapLibreMapController extends ChangeNotifier {
       for (final fun
           in List<OnFeatureInteractionCallback>.from(onFeatureTapped)) {
         fun(payload["id"], payload["point"], payload["latLng"],
-            payload["layerId"]);
+            payload["layerId"] ?? "");
       }
     });
 
